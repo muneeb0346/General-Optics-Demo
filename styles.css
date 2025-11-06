@@ -7,6 +7,7 @@
     --white: #FFFFFF;
     --white-66: rgba(255, 255, 255, 0.66);
     --main-color: #154994;
+    --main-color-16: rgb(21, 73, 148, 0.16);
     --dark-blue: #011D45;
     --accent-color: #218CD9;
     --accent-color-30: rgb(33, 140, 217, 0.3);
@@ -14,6 +15,7 @@
     --bg-color: #F2F3F4;
     --shadow-1: 0px 3px 6px var(--black-light-20);
     --shadow-2: 0px 0px 10px var(--black);
+    --shadow-3: 0px 0px 50px var(--main-color-16);
 }
 
 @font-face {
@@ -57,6 +59,21 @@
     src: url("assets/fonts/ZenKakuGothicNew-Regular.ttf") format("trueType");
     font-style: normal;
     font-display: swap;
+}
+
+h2 {
+    font-family: ZenKakuGothicNew-Black, sans-serif;
+    font-size: 48px;
+    line-height: 1;
+}
+
+h3 {
+    font-family: ZenKakuGothicNew-Bold, sans-serif;
+    font-size: 20px;
+}
+
+.black {
+    color: var(--black);
 }
 
 body {
@@ -255,6 +272,7 @@ main {
     width: 100vw;
     max-width: none;
     aspect-ratio: 1440 / 878;
+    z-index: -1;
 }
 
 .text-image {
@@ -300,4 +318,70 @@ main {
     right: 17%;
     width: 21%;
     aspect-ratio: 299 / 275;
+}
+
+#products {
+    width: var(--sec-width);
+    max-width: var(--sec-max-width);
+    padding: 100px 80px;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    box-shadow: var(--shadow-3);
+    color: var(--main-color);
+    gap: 40px;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.section-heading ul {
+    font-family: ZenKakuGothicNew-Bold, sans-serif;
+    font-size: 16px;
+}
+
+.section-heading li::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: var(--main-color);
+    margin-right: 8px;
+}
+
+.section-heading h2 {
+    text-transform: uppercase;
+}
+
+.separator-line {
+    width: 100%;
+    height: 1px;
+    background: var(--main-color);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-row-gap: 40px;
+    grid-column-gap: 24px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 352 / 248;
+    object-fit: contain;
 }
