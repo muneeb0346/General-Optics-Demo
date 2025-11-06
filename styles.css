@@ -3,15 +3,17 @@
     --sec-width: 89%;
     --sec-max-width: 1280px;
     --black: #444C55;
-    --black-light-20: rgb(54, 54, 54, 0.20);
+    --black-light-20: rgb(54, 54, 54, 0.2);
     --white: #FFFFFF;
     --white-66: rgba(255, 255, 255, 0.66);
     --main-color: #154994;
     --dark-blue: #011D45;
     --accent-color: #218CD9;
+    --accent-color-30: rgb(33, 140, 217, 0.3);
     --light-blue: #8BE6F7;
     --bg-color: #F2F3F4;
     --shadow-1: 0px 3px 6px var(--black-light-20);
+    --shadow-2: 0px 0px 10px var(--black);
 }
 
 @font-face {
@@ -69,14 +71,24 @@ header {
     width: 100%;
     height: 80px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: start;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     background: var(--white-66);
     -webkit-backdrop-filter: blur(30px) brightness(130%);
     backdrop-filter: blur(30px) brightness(130%);
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width);
+    height: 100%;
 }
 
 .logo {
@@ -104,4 +116,109 @@ header {
     font-size: 20px;
     color: var(--white);
     box-shadow: var(--shadow-1);
+}
+
+main {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+
+}
+
+.hero-bg {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    max-height: 800px;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(18px);
+}
+
+.hero {
+    width: 100%;
+    height: 100dvh;
+    max-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--white);
+}
+
+.hero-inner-1 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: var(--sec-width);
+    max-width: var(--sec-max-width);
+    height: 100%;
+    gap: 26px;
+    z-index: 1;
+}
+
+.hero-inner-2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-image {
+    width: 83%;
+    aspect-ratio: 1200 / 600;
+}
+
+.hero-title {
+    font-family: ZenKakuGothicNew-Black, sans-serif;
+    font-size: 40px;
+    filter: drop-shadow(var(--shadow-2));
+}
+
+.hero-text {
+    font-size: 24px;
+    line-height: 1.6;
+    filter: drop-shadow(var(--shadow-2));
+    width: 61%;
+}
+
+.scroll-button {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    width: 148px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: var(--accent-color-30);
+    padding: 6px;
+    color: var(--main-color);
+    font-family: ZenKakuGothicNew-Bold, sans-serif;
+    font-size: 20px;
+}
+
+.scroll-button-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    gap: 9px;
+}
+
+.scroll-icon {
+    height: 46px;
 }
