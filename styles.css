@@ -261,7 +261,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
 }
 
 #images-with-text {
@@ -280,7 +280,7 @@ main {
     width: 100vw;
     max-width: none;
     aspect-ratio: 1440 / 878;
-    z-index: -1;
+    z-index: -2;
 }
 
 .text-image {
@@ -397,7 +397,7 @@ main {
     object-fit: contain;
 }
 
-.button-1 {
+.site-button {
     width: 300px;
     max-width: 100%;
     border-radius: 1000px;
@@ -407,7 +407,12 @@ main {
     font-family: ZenKakuGothicNew-Bold, sans-serif;
 }
 
-.button-1-inner {
+.site-button.white {
+    background: var(--white-30);
+    color: var(--main-color);
+}
+
+.site-button .inner {
     width: 100%;
     border-radius: 1000px;
     background: linear-gradient(150deg, var(--main-color) 40%, var(--dark-blue) 160%);
@@ -418,7 +423,11 @@ main {
     position: relative;
 }
 
-.button-1 img {
+.site-button.white .inner {
+    background: var(--white);
+}
+
+.site-button img {
     height: 24px;
     aspect-ratio: 1 / 1;
     position: absolute;
@@ -437,14 +446,14 @@ main {
 }
 
 .many-lenses {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 640px;
     max-width: none;
-    aspect-ratio: 1440 / 640;
-    z-index: -1;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: -2;
     position: absolute;
-    bottom: 180px;
-    left: 0;
+    bottom: 220px;
 }
 
 .about-grid {
@@ -540,4 +549,58 @@ main {
 
 .about-card:hover .bg-gradient {
     transform: translateX(-100%);
+}
+
+#join-us {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: ZenKakuGothicNew-Regular, sans-serif;
+    color: var(--white);
+}
+
+.people {
+    width: 100vw;
+    max-width: none;
+    height: 440px;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.join-us-inner {
+    width: 53%;
+    margin-top: -304px;
+    margin-left: auto;
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.recruit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 42px 35% 60px 10%;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.join-us-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.join-us-image {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    width: 40%;
+    aspect-ratio: 300 / 235;
+    z-index: 1;
 }
