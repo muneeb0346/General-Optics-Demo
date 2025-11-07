@@ -107,7 +107,7 @@ header {
     z-index: 1000;
 }
 
-.header-inner {
+header>.inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,7 +129,7 @@ header {
     max-height: 100%;
 }
 
-.nav-links-inner {
+.nav-links>.inner {
     display: flex;
     gap: 40px;
 }
@@ -150,7 +150,7 @@ main {
     width: 100%;
 }
 
-.container {
+.container-1 {
     padding-top: 80px;
     min-width: 100%;
     display: flex;
@@ -184,7 +184,7 @@ main {
     color: var(--white);
 }
 
-.hero-inner-1 {
+#hero>.inner-1 {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -197,7 +197,7 @@ main {
     z-index: 1;
 }
 
-.hero-inner-2 {
+#hero>.inner-2 {
     position: absolute;
     display: flex;
     align-items: center;
@@ -239,7 +239,7 @@ main {
     font-size: 20px;
 }
 
-.scroll-button-inner {
+.scroll-button>.inner {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -412,7 +412,7 @@ main {
     color: var(--main-color);
 }
 
-.site-button .inner {
+.site-button>.inner {
     width: 100%;
     border-radius: 1000px;
     background: linear-gradient(150deg, var(--main-color) 40%, var(--dark-blue) 160%);
@@ -423,7 +423,7 @@ main {
     position: relative;
 }
 
-.site-button.white .inner {
+.site-button.white>.inner {
     background: var(--white);
 }
 
@@ -493,14 +493,13 @@ main {
     border-radius: 50%;
     background: var(--white-30);
     padding: 4px;
-    color: var(--main-color);
-    font-family: ZenKakuGothicNew-Bold, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: padding 0.2s ease-in;
 }
 
-.about-card-button-inner {
+.about-card-button>.inner {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -513,6 +512,10 @@ main {
 .about-card-button img {
     width: 24px;
     aspect-ratio: 1 / 1;
+}
+
+.about-card-button:hover {
+    padding: 0px;
 }
 
 .bg-gradient {
@@ -559,6 +562,7 @@ main {
     align-items: center;
     font-family: ZenKakuGothicNew-Regular, sans-serif;
     color: var(--white);
+    position: relative;
 }
 
 .people {
@@ -569,12 +573,11 @@ main {
     object-position: top left;
 }
 
-.join-us-inner {
+#join-us>.inner {
     width: 53%;
-    margin-top: -304px;
-    margin-left: auto;
-    padding-bottom: 90px;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 138px;
 }
 
 .recruit-card {
@@ -598,9 +601,107 @@ main {
 
 .join-us-image {
     position: absolute;
-    bottom: 0;
-    right: 40px;
+    top: 67%;
+    right: 5%;
     width: 40%;
     aspect-ratio: 300 / 235;
     z-index: 1;
+}
+
+.container-2 {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#news {
+    width: 100%;
+    max-width: var(--max-width);
+    padding-top: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--main-color);
+}
+
+#news>.inner {
+    width: 67%;
+    max-width: 963px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.news-list {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 40px;
+    color: var(--black);
+}
+
+.news-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.news-item>.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+}
+
+.news-date {
+    font-family: ZenKakuGothicNew-Regular, sans-serif;
+}
+
+.news-item-button {
+    width: 56px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: var(--main-color-30);
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    transition: padding 0.2s ease-in;
+}
+
+.news-item-button>.inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+}
+
+.news-item-button img {
+    width: 24px;
+    aspect-ratio: 1 / 1;
+}
+
+.news-item-button:hover {
+    padding: 0px;
 }
