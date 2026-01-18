@@ -309,11 +309,12 @@ main {
 .text-image {
     width: 170px;
     aspect-ratio: 170 / 540;
+    z-index: 1;
 }
 
 .machine-01 {
     position: absolute;
-    top: 95px;
+    top: 10%;
     left: 16%;
     width: 16%;
     aspect-ratio: 240 / 160;
@@ -321,7 +322,7 @@ main {
 
 .haruchika-polishing-machine {
     position: absolute;
-    top: 335px;
+    top: 38%;
     left: 0;
     width: 28%;
     aspect-ratio: 400 / 256;
@@ -329,7 +330,7 @@ main {
 
 .automatic-deposition-machine {
     position: absolute;
-    top: 631px;
+    top: 71%;
     left: 22%;
     width: 14%;
     aspect-ratio: 200 / 120;
@@ -337,7 +338,7 @@ main {
 
 .holding-lens {
     position: absolute;
-    top: 135px;
+    top: 15%;
     right: 0;
     width: 28%;
     aspect-ratio: 400 / 256;
@@ -345,7 +346,7 @@ main {
 
 .spinner {
     position: absolute;
-    top: 476px;
+    top: 54%;
     right: 17%;
     width: 21%;
     aspect-ratio: 299 / 275;
@@ -911,6 +912,38 @@ main {
     .hero-image {
         width: 85%;
     }
+
+    #company {
+        padding: 140px 0px 150px;
+    }
+
+    .bg-2 {
+        height: calc(100% - 220px);
+    }
+
+    .text-image {
+        width: 140px;
+    }
+
+    .machine-01 {
+        width: 20%;
+    }
+
+    .haruchika-polishing-machine {
+        width: 30%;
+    }
+
+    .automatic-deposition-machine {
+        width: 18%;
+    }
+
+    .holding-lens {
+        width: 30%;
+    }
+
+    .spinner {
+        width: 23%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1041,5 +1074,37 @@ main {
         height: 360px;
         object-fit: cover;
         object-position: 45%;
+    }
+
+    #company {
+        padding: 120px 0px 130px;
+    }
+
+    .bg-2 {
+        top: 180px;
+        height: calc(100% - 180px);
+    }
+
+    .text-image {
+        width: 120px;
+    }
+
+    .machine-01 {
+        width: 25%;
+        left: 5%;
+    }
+
+    .automatic-deposition-machine {
+        width: 20%;
+        left: 10%;
+    }
+
+    .holding-lens {
+        width: 30%;
+    }
+
+    .spinner {
+        width: 25%;
+        right: 5%;
     }
 }
