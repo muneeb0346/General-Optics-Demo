@@ -975,6 +975,25 @@ main {
     #products .site-button {
         width: 280px;
     }
+
+    #about {
+        padding: 280px 0px 160px;
+    }
+
+    .about-grid {
+        width: 85%;
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+    }
+
+    .about-card {
+        padding: 36px 32px 48px;
+        gap: 40px;
+    }
+
+    .many-lenses {
+        height: 520px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1156,5 +1175,34 @@ main {
 
     #products .site-button {
         width: 100%;
+    }
+
+    #about {
+        padding: 200px 0px 120px;
+    }
+
+    .many-lenses {
+        height: 100%;
+        bottom: 150px;
+    }
+
+    .about-grid {
+        width: 92%;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 24px;
+    }
+
+    .about-card {
+        padding: 28px 24px 40px;
+        gap: 32px;
+    }
+
+    .about-card-button {
+        width: 56px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
     }
 }
