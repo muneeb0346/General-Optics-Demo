@@ -996,12 +996,11 @@ main {
     }
 
     #join-us>.inner {
-        width: 70%;
+        width: 75%;
         top: 120px;
     }
 
     .recruit-card {
-
         padding: 36px 30% 50px 8%;
         gap: 40px;
     }
@@ -1207,7 +1206,7 @@ main {
     }
 
     .about-grid {
-        width: 92%;
+        width: var(--sec-width);
         grid-template-columns: 1fr;
         grid-column-gap: 0;
         grid-row-gap: 24px;
@@ -1231,20 +1230,22 @@ main {
     }
 
     #join-us>.inner {
-        width: 92%;
-        position: static;
-        margin-top: -60px;
+        position: relative;
+        width: var(--sec-width);
+        right: auto;
+        top: -60px;
     }
 
     .recruit-card {
-        padding: 28px 24px 40px;
+        padding: 28px 24px 140px;
         gap: 32px;
+        margin-bottom: -120px;
     }
 
     .join-us-image {
-        position: static;
-        width: 70%;
-        max-width: 240px;
-        margin: -40px auto 0;
+        width: 240px;
+        right: 0;
+        position: relative;
+        margin: 0 auto;
     }
 }
