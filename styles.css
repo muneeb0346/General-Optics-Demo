@@ -645,7 +645,7 @@ main {
     right: 5%;
     width: 40%;
     aspect-ratio: 300 / 235;
-    z-index: 1;
+    z-index: 2;
 }
 
 .container-2 {
@@ -994,6 +994,26 @@ main {
     .many-lenses {
         height: 520px;
     }
+
+    #join-us>.inner {
+        width: 70%;
+        top: 120px;
+    }
+
+    .recruit-card {
+
+        padding: 36px 30% 50px 8%;
+        gap: 40px;
+    }
+
+    .people {
+        height: 380px;
+    }
+
+    .join-us-image {
+        width: 42%;
+        top: 65%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1204,5 +1224,27 @@ main {
 
     .section-heading h2 {
         font-size: 32px;
+    }
+
+    .people {
+        height: 280px;
+    }
+
+    #join-us>.inner {
+        width: 92%;
+        position: static;
+        margin-top: -60px;
+    }
+
+    .recruit-card {
+        padding: 28px 24px 40px;
+        gap: 32px;
+    }
+
+    .join-us-image {
+        position: static;
+        width: 70%;
+        max-width: 240px;
+        margin: -40px auto 0;
     }
 }
