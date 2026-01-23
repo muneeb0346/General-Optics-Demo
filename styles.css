@@ -807,6 +807,7 @@ main {
 .mail-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     background: var(--main-to-dark-blue-150deg-gradient);
     border-radius: 1000px;
@@ -823,6 +824,7 @@ main {
 .phone-button {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     background: var(--accent-color-20);
     border-radius: 1000px;
@@ -1036,6 +1038,37 @@ main {
 
     .news-item {
         gap: 24px;
+    }
+
+    #contact {
+        padding: 140px 0px 200px;
+    }
+
+    #contact>.inner {
+        width: 85%;
+        padding: 36px 32px;
+        gap: 40px;
+    }
+
+    .contact-text {
+        gap: 40px;
+        width: 100%;
+    }
+
+    .contact-links {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .mail-button,
+    .phone-button {
+        height: 92px;
+        padding: 0px 20px 0px 32px;
+        gap: 16px;
+    }
+
+    .phone-number {
+        font-size: 28px;
     }
 }
 
@@ -1317,5 +1350,43 @@ main {
         align-self: flex-end;
         width: 40px;
 
+    }
+
+    #contact {
+        padding: 100px 0px 160px;
+    }
+
+    #contact>.inner {
+        width: 92%;
+        flex-direction: column;
+        padding: 28px 20px;
+        gap: 32px;
+    }
+
+    .contact-text {
+        gap: 32px;
+        width: 100%;
+    }
+
+    .contact-links {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .mail-button,
+    .phone-button {
+        height: 80px;
+        padding: 0px 16px 0px 24px;
+        gap: 12px;
+        font-size: 12px;
+    }
+
+    .mail-button img,
+    .phone-button img {
+        width: 28px;
+    }
+
+    .phone-number {
+        font-size: 24px;
     }
 }
