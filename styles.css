@@ -975,7 +975,7 @@ main {
         grid-row-gap: 32px;
     }
 
-    #products .site-button {
+    .site-button {
         width: 280px;
     }
 
@@ -1249,7 +1249,7 @@ main {
         gap: 16px;
     }
 
-    #products .site-button {
+    .site-button {
         width: 100%;
     }
 
